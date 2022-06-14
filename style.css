@@ -20,6 +20,7 @@ nav .navLeft li {
   display: inline;
   margin-left: 20px;
 }
+
 nav .navLeft a {
   color: black;
   text-decoration: none;
@@ -47,7 +48,7 @@ main {
   background-color: white;
   margin: 120px auto;
   border-radius: 8px;
-  padding: 70px;
+  padding: 60px;
   box-shadow: -1px 1px 8px grey;
 }
 section {
@@ -84,6 +85,7 @@ section a {
 .right {
   display: flex;
   flex: 40%;
+  /* height: 20vh; */
 }
 .right div {
   background-color: #fafafa;

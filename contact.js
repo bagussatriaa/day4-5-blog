@@ -6,18 +6,18 @@ function submitThis() {
   let message = document.getElementById("input-message").value;
 
   if (name == "") {
-    return alert("Mohon mengisi nama anda");
+    return alert("Please enter your name");
   } else if (email == "") {
-    return alert("Mohon mengisi email anda");
+    return alert("Fill in your email");
   } else if (phone == "") {
-    return alert("Mohon mengisi nomor telepon anda");
+    return alert("Fill in your phone too");
   } else if (message == "") {
-    return alert("Mohon mengisi pesan anda");
+    return alert("The message sir");
   }
   let emailPenerima = "admin@mail.com";
   let anchor = document.createElement("a");
 
-  anchor.href = `mailto:${emailPenerima}?subject=${subject}&body=Hello my name  ${name}.  ${message}`;
+  anchor.href = `mailto:${emailPenerima}?subject=${subject}&body=Hello my name  ${name}.  ${message}. Give me a call, ${phone}`;
   anchor.click();
 
   console.log(name);

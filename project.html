@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="project.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="navLeft">
+        <img src="assets/download-removebg-preview.png" alt="Logo" width="44" />
+        <ul>
+          <li class="home" style="font-weight: bold">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="project">
+            <a href="project.html">My Projects</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navRight">
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>ADD MY PROJECTS</h1>
+      <div class="blogForm">
+        <form>
+          <div>
+            <label for="project-name">Project Name</label>
+            <input type="text" id="project-name" />
+          </div>
+          <div class="input-date">
+            <div class="start-date">
+              <label for="startDate">Start Date</label>
+              <input type="date" name="" id="startDate" />
+            </div>
+            <div class="end-date">
+              <label for="endDate">End Date</label>
+              <input type="date" name="" id="endDate" />
+            </div>
+          </div>
+          <div>
+            <label for="desc">Description</label>
+            <textarea id="desc"></textarea>
+          </div>
+          <div class="checkbox">
+            <label for="Technologies">Technologies</label>
+            <div class="top">
+              <input type="checkbox" value="js" id="js" />
+              <label style="font-weight: lighter" for="js">JavaScript</label>
+
+              <input type="checkbox" value="java" id="java" />
+              <label style="font-weight: lighter" for="java">Java</label>
+            </div>
+            <div class="bottom">
+              <input type="checkbox" value="vuejs" id="vuejs" />
+              <label style="font-weight: lighter" for="vuejs">VueJs</label>
+              <input type="checkbox" value="bootstrap" id="bootstrap" />
+              <label style="font-weight: lighter" for="bootstrap">Bootstrap</label>
+            </div>
+          </div>
+          <label for="image">Upload Image</label>
+          <div class="uploadImage">
+            <label for="image">
+              <p>Choose</p>
+              <i class="bi bi-paperclip"></i>
+            </label>
+            <input type="file" id="image" hidden />
+          </div>
+          <div class="submit">
+            <button onclick="addPost(event)">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- Post blog -->
+      <div class="post">
+        <h1>My Project</h1>
+
+        <div id="contents" class="contents">
+          <!-- <div class="grid-item">
+            <div class="img">
+              <img src="assets/download-removebg-preview.png" alt="Ddd" />
+            </div>
+            <h2>Title</h2>
+            <h6>Duration :</h6>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum culpa nesciunt odit placeat laboriosam velit laudantium iure ad adipisci ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore t</p>
+            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-js"></i>
+            <div class="button">
+              <button>edit</button>
+              <button>delete</button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script src="project.js"></script>
+  </body>
+</html>
