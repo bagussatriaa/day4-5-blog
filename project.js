@@ -13,13 +13,7 @@ function addPost(event) {
   let vuejs = document.getElementById("vuejs").checked;
   let bootstrap = document.getElementById("bootstrap").checked;
 
-  let duration = "";
-
-  if (startDate < endDate) {
-    duration = new Date(endDate - startDate);
-  } else {
-    return alert("Incorrect date entry");
-  }
+  // let duration = "";
 
   if (js) {
     js = document.getElementById("js").value;
@@ -47,14 +41,20 @@ function addPost(event) {
 
   if (projectName == "") {
     return alert("The project name is required.");
-  } else if (desc == "") {
+  }
+  if (startDate < endDate) {
+    duration = endDate - startDate;
+  } else {
+    return alert("Incorrect date entry");
+  }
+  if (desc == "") {
     return alert("The description is required too sir..");
   } else if (js == "" && java == "" && vuejs == "" && bootstrap == "") {
     return alert("Take at least 1 technologies");
+  } else if (startDate == "" || endDate == "") {
+    return alert("Fill the date");
   }
-  // if (startDate == "" || endDate == "") {
-  //   return alert("isi bos");
-  // }
+
   let blog = {
     projectName,
     startDate,
@@ -86,7 +86,7 @@ function renderPost() {
         <img src="${blogData[i].image}" />
       </div>
       <h2>${blogData[i].projectName}</h2>
-      <h6>Duration : ${blogData[i].duration}</h6>
+      <h6>Duration : -</h6>
       <p>${blogData[i].desc}</p>
       <i class="fa-brands fa-${blogData[i].js}"></i>
       <i class="fa-brands fa-${blogData[i].java}"></i>

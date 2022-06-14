@@ -45,21 +45,30 @@ form .end-date {
 form textarea {
   height: 155px;
 }
+form .checkbox {
+  background-color: transparent;
+}
 
 form .checkbox .top input,
 .bottom input {
-  background-color: saddlebrown !important;
+  background-color: green;
+  border: none;
   box-shadow: none;
 }
 
 form .checkbox .top {
   display: flex;
-  width: 50%;
+  width: 100%;
+  margin-bottom: 20px;
 }
-form .checkbox .bottom {
+/* form .checkbox .bottom {
   display: flex;
-
+  margin-right: 200px;
   width: 50%;
+} */
+.bottom .vuejs label {
+  margin-right: 400px;
+  color: red;
 }
 form .checkbox label {
   margin-top: -2px;
